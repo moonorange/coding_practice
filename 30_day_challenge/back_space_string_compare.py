@@ -9,6 +9,7 @@ class Solution:
             return res
         return reduce(back, S, []) == reduce(back, T, [])
 
+import itertools
 #memory complexity O(1)
 class Solution2(object):
     def backspaceCompare(self, S, T):
