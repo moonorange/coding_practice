@@ -23,7 +23,7 @@ class Solution2(object):
                 else:
                     yield x
 
-        return all(x == y for x, y in itertools.izip_longest(F(S), F(T)))
+        return all(x == y for x, y in itertools.zip_longest(F(S), F(T)))
 
 """
 What I learnt
