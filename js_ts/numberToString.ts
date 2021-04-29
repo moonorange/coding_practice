@@ -1,3 +1,5 @@
+
+
 export function numberToString(num: number): string {
   // Return a string of the number here!
   const str_num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -16,4 +18,8 @@ export function numberToString(num: number): string {
     ans = '-' + ans;
   }
   return ans;
+}
+
+export function numberToString2(num: number): string {
+	return num.toString();
 }
