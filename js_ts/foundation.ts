@@ -25,3 +25,9 @@ export function positiveSum(arr:number[]):number {
   }
   return sum;
 }
+
+
+// Better solution of Sum of positive
+export function positiveSum2(arr:number[]):number {
+  return arr.reduce((sum, n) => n > 0 ? sum + n : sum, 0);
+}
