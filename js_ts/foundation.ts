@@ -13,3 +13,15 @@ export const digitize = (n: number): number[] => {
   const num_list = str_n.map(x => Number(x));
   return num_list.reverse();
 };
+
+
+// Sum of positive
+export function positiveSum(arr:number[]):number {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (0 < arr[i]) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
