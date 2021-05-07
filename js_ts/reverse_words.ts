@@ -9,3 +9,15 @@ export function reverseWords(str: string): string {
   }
  return split_str.join(" ");
 }
+
+
+// Same thing as one liner in best practices
+export function reverseWords2(str: string): string {
+
+  // 1. first create an array with the original words
+  // 2. loop through each word and make it an array of characters
+  // 3. reverse the array and make it a string again, so it is a word again but reversed
+  // 4. join the resulting array
+
+  return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
