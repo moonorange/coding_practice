@@ -31,3 +31,28 @@ export function positiveSum(arr:number[]):number {
 export function positiveSum2(arr:number[]):number {
   return arr.reduce((sum, n) => n > 0 ? sum + n : sum, 0);
 }
+
+
+
+// Find Maximum and Minimum Values of a List
+// https://www.codewars.com/kata/577a98a6ae28071780000989/train/typescript
+
+export const max = (list: number[]): number => {
+  let max_num = list[0];
+  for (let i = 0; i < list.length; i++) {
+    if (max_num < list[i]) {
+      max_num = list[i];
+    }
+  }
+  return max_num;
+};
+
+export const min = (list: number[]): number => {
+  let min_num = list[0];
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] < min_num) {
+      min_num = list[i];
+    }
+  }
+  return min_num;
+};

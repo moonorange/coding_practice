@@ -7,3 +7,9 @@ export function rowSumOddNumbers(n: number) {
   const first = last - (2 * (n - 1))
   return n / 2 * (first + last);
 }
+
+
+// clever solution
+export function rowSumOddNumbers2(n: number) {
+  return n ** 3;
+}
