@@ -56,3 +56,11 @@ export const min = (list: number[]): number => {
   }
   return min_num;
 };
+
+
+// Simple, remove the spaces from the string, then return the resultant string.
+// https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/typescrip
+
+export function noSpace(x:string):string {
+  return x.split(" ").join("");
+}
