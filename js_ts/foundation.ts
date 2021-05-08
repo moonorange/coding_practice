@@ -1,3 +1,5 @@
+// Basic problems to get used to typescript
+
 export const boolToWord = (bool: boolean): string => {
   if (bool) {
     return 'Yes';
@@ -64,3 +66,11 @@ export const min = (list: number[]): number => {
 export function noSpace(x:string):string {
   return x.split(" ").join("");
 }
+
+// Build a function that returns an array of integers from n to 1 where n>0.
+// Example : n=5 --> [5,4,3,2,1]
+// https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/typescript
+
+export const reverseSeq = (n: number): number[] => {
+  return [...Array(n)].map((_, i) => n - i);
+};
