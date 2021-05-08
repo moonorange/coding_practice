@@ -20,3 +20,11 @@ export function duplicateCount(text: string): number{
   }
   return Object.values(counter).reduce((sum, n) => 1 < n ? sum += 1 : sum, 0);
 }
+
+
+// Solution using lodash in the best practices
+import _ from 'lodash';
+
+export function duplicateCount2(text: string): number {
+  return _(text).countBy(_.toUpper).values().filter(x => x > 1).size();
+}
