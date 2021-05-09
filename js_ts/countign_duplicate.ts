@@ -15,7 +15,7 @@
 // First attempt
 export function duplicateCount(text: string): number{
   let counter: {[curr: string]: number} = {};
-  for (var curr of text.toLowerCase()) {
+  for (let curr of text.toLowerCase()) {
     counter[curr] = counter[curr] ? counter[curr] + 1 : 1;
   }
   return Object.values(counter).reduce((sum, n) => 1 < n ? sum += 1 : sum, 0);
