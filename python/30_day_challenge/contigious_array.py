@@ -1,4 +1,4 @@
-# misinterpred the question in my first submission
+# misinterpreted the question in my first submission
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         ans = 0
@@ -17,7 +17,7 @@ class Solution:
 
         return ans
 
-# misinterpreted the questio in my second submission again
+# misinterpreted the question in my second submission again
 class Solution2:
     def findMaxLength(self, nums: List[int]) -> int:
         zero = 0

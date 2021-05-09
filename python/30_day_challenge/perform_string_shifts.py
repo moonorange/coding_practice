@@ -50,4 +50,4 @@ class Solution:
                     list_s.insert(0,list_s.pop(-1))
         return "".join(list_s)
 
-# This question is relatively easy, so I'll think about more time and memory effective
+# This question is relatively easy, so I'll think about more time and memory effectiveness
