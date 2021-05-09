@@ -1,16 +1,47 @@
+// https://www.codewars.com/kata/54d81488b981293527000c8f/train/typescript
+// Given a list of integers and a single sum value, return the first two values (parse from the left please) in order of appearance that add up to form the sum.
+
+
+// First inefficient code
 export function sumPairs(ints: number[], s: number): [number, number] | void {
-	let ans_list = [];
+	let ans: number[] = [];
 	for (let i = 0; i < ints.length; i++) {
 		for (let j = 0; j < ints.length; j++) {
-			if (i === j) {
-				j++ ;
-			}
+			if (i === j) { continue; }
 			if (ints[i] + ints[j] === s) {
-				ans_list.push(i, j);
+				if (!ans.length) {
+					ans = [i, j];
+				}
+				if (Math.max(i, j) < Math.max(...ans)) {
+					console.log(Math.max(...ans));
+					ans = [i, j];
+				}
 			}
 		}
 	}
-	return undefined;
+	// console.log(ans);
+	return ans.length ? [ints[ans[0]], ints[ans[1]]] : undefined;
+}
+
+
+// Second attempt after realizing redundant iteration
+export function sumPairs2(ints: number[], s: number): [number, number] | void {
+	let ans: number[] = [];
+	for (let i = 0; i < ints.length; i++) {
+		for (let j = i + 1; j < ints.length; j++) {
+			if (i === j) { continue; }
+			if (ints[i] + ints[j] === s) {
+				if (!ans.length) {
+					ans = [i, j];
+				}
+				if (Math.max(i, j) < Math.max(...ans)) {
+					ans = [i, j];
+				}
+			}
+		}
+	}
+	// console.log(ans);
+	return ans.length ? [ints[ans[0]], ints[ans[1]]] : undefined;
 }
 
 const l1: number[] = [1, 4, 8, 7, 3, 15],
