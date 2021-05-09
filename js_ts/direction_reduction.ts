@@ -1,7 +1,5 @@
 // https://www.codewars.com/kata/550f22f4d758534c1100025a/train/typescript
-
-
-// https://www.codewars.com/kata/550f22f4d758534c1100025a/train/typescript
+// https://www.codewars.com/kata/550f22f4d758534c1100025a/solutions/typescript
 
 
 interface NewArray {
