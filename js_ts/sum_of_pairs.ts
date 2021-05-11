@@ -77,3 +77,18 @@ l7: number[] = [0, 2, 0],
 l8: number[] = [5, 9, 13, -3];
 
 console.log(sumPairs(l5, 10));
+
+
+// The passed solution
+export function sumPairs4(ints: number[], s: number): [number, number] | void {
+	const seen = new Set();
+  for (let i = 0; i < ints.length; i++) {
+    const diff = s - ints[i]
+    if (seen.has(diff)) {
+      return [diff, ints[i]];
+    }
+    else {
+      seen.add(ints[i]);
+    }
+  }
+}
